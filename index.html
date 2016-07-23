@@ -1,0 +1,85 @@
+<!--1 screen 12 column-->
+<!DOCTYPE html>
+<html>
+<head> 
+	<title>Sabtuuu</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	
+</head>
+<body>
+	<div id="app">
+		<div class="container" >
+
+		<title haha="My First Value"></title>
+		<title bdn="sub paragraph"></title>
+		<div class="row">
+			<div class="col-md-6">
+			<lala datalmbtn="Primary"></lala>
+			<lala datalmbtn='Secondary'></lala>
+			<lala datalmbtn='Third'></lala>
+			<lala datalmbtn='Forth'></lala>
+
+			<!--<button type="button" class="btn btn-primary col-md-12">Primary</button>
+			<button type="button" class="btn btn-primary col-md-12">Secondary</button>
+			<button type="button" class="btn btn-primary col-md-12">Third</button>
+			<button type="button" class="btn btn-primary col-md-12">Forth</button>-->
+
+			</div>
+			<div class="col-md-6">
+				<iframe width="100%" height="auto" src="https://www.youtube.com/embed/ytFFJDWnh_0" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<!--md-medium screen xs-small screen xl-large screen-->
+		</div>
+		</div>
+
+	</div>
+
+	<template id="btnsy">
+		<button type="button" class="btn btn-primary col-md-12">{{datalmbtn}}</button>
+
+	</template >
+
+
+	<template id="tajuk">
+	<div class="text-center">
+		<h1>{{haha}}</h1>
+		<p>{{bdn}}</p>
+		</div>
+	</template>
+<!--wajib ada sblum library-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+
+<script type="text/javascript">
+	Vue.component('lala',
+		{
+
+		template:'#btnsy',
+		props:['datalmbtn'],
+		});
+
+
+	Vue.component('title',
+		{
+
+		template:'#tajuk',
+		props:['haha','bdn'],
+		});
+	
+
+	new Vue({
+
+	el :'#app'
+
+	});
+</script>
+
+<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</body>
+</html>
